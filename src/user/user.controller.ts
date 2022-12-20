@@ -33,9 +33,9 @@ export class UserController {
       email,
       password: hashedPassword,
     });
-    delete user.password;
+    delete user.password; // not to reveal to anyone
 
-    return user;
+    return user;   // return data
   }
 
   @Post('login')
